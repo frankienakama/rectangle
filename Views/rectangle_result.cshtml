@@ -1,0 +1,19 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+<h2>Is it a square?</h2>
+
+<p>Your rectangle's length is @Model["ResultingRectangle"].GetLength()</p>
+<p>Your rectangle's width is @Model["ResultingRectangle"].GetWidth()</p>
+
+@if (@Model["ResultingRectangle"].IsSquare())
+{
+  <h4>Congratulations! You made a square!</h4>
+  <p>Surface area of a cube with those dimensions: @Model["ResultingCube"].GetSurfaceArea()</p>
+  <p>Volume of a cube with those dimensions: @Model["ResultingCube"].GetVolume()</p>
+}
+else
+{
+  <h4>Sorry! This isn't a square.</h4>
+}
+<p><a href="/">Make another rectangle!</a></p>
